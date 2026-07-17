@@ -1,0 +1,11 @@
+{:dependencies
+ [{:dependency/id etzhayyim/root
+   :dependency/repository "https://github.com/etzhayyim/root"
+   :dependency/revision "cd6a372ce44c2652e61b15d95689f5ed0003b298"
+   :dependency/paths ["90-docs/adr"]}
+  {:dependency/id com.etzhayyim/hagukumi :dependency/revision "7d34cb0660057005643f95fd9c298aeb1ff0ac82"}
+  {:dependency/id com.etzhayyim/iyashi :dependency/revision "eceea556237590f861a475b64bf41048c90f6213"}
+  {:dependency/id com.etzhayyim/kawase-yui :dependency/revision "16877fce7b32030248b2088265ebd1c0a266e47c"}
+  {:dependency/id com.etzhayyim/kazaori :dependency/revision "08750097c50f1b37380d7ceaf9f63b94baeb6c54"}
+  {:dependency/id com.etzhayyim/toritate :dependency/revision "3354850aa05408e840426f91fe067ddad8535e5b"}
+  {:dependency/id com.etzhayyim/yakushi :dependency/revision "5b2389671defc00ef8c7cfa522b9bc96b3ac192f"}]}

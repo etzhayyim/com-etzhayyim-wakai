@@ -1,14 +1,12 @@
 (ns wakai.methods.test-charter-gates
   "wakai 和会 — constitutional-gate conformance tests. Substrate-native Clojure (ADR-2606160842); 1:1 port of pruned test_charter_gates.py."
-  (:require [clojure.test :refer [deftest is run-tests]]
-            [cheshire.core :as json]))
+  (:require [clojure.test :refer [deftest is]]
+            [clojure.edn :as edn]))
 
 (def ^:private here (.getParentFile (java.io.File. ^String *file*)))
-(def ^:private actor-dir (.getParentFile here))
-(def ^:private actor-name (.getName actor-dir))
-(def ^:private root (.. actor-dir getParentFile getParentFile))
-(def ^:private lexdir (java.io.File. root (str "00-contracts/lexicons/com/etzhayyim/" actor-name)))
-(defn- lex [name] (json/parse-string (slurp (java.io.File. lexdir (str name ".json")))))
+(def ^:private repository-root (.. here getParentFile getParentFile getParentFile))
+(def ^:private lexdir (java.io.File. repository-root "lex"))
+(defn- lex [name] (edn/read-string (slurp (java.io.File. lexdir (str name ".edn")))))
 
 (defn- consts [doc]
   "field-name -> const value, for every const declared in the lexicon tree."

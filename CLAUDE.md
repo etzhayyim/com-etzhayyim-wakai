@@ -1,4 +1,4 @@
-# 20-actors/wakai — CLAUDE.md
+# com-etzhayyim-wakai — CLAUDE.md
 
 ## Identity
 
@@ -165,19 +165,21 @@ R3 adds emergency_pool_activation (kazaori cross-actor).
 
 ## Build & Deploy
 
-**R0 status**: Scaffold only. R0 cells RuntimeError on import.
+**R0 status**: `methods/pool.cljc` is a reference-impl engine (pure `validate-contribution` /
+`validate-distribution` / `aggregate-pool-state` functions, exercised by
+`bb --classpath src:test run_tests.clj`) — this is validation + aggregation ONLY, not a live pool. The Pregel CELLS
+themselves (contribution / distribution / pool-state / backstop) are still unwired scaffold
+and RuntimeError on import; wiring one to `methods/pool.cljc` + live kotoba-kotodama execution
+is separate R1 work, Council+operator gated same as every other actor's R0→live boundary.
 
-R1 smoke test (when cells created):
-```bash
-cd 40-engine/kotoba/crates/kotoba-kotodama/py
-python -c "from kotodama.cells.wakai_mutual_aid_pool_contribution import _r0_marker" 2>&1 | grep "R0 scaffold"
-```
+R1 runtime wiring belongs in its owning engine repository and must consume this repository
+through the west checkout plus a pinned revision in `dependencies.edn`.
 
 ## Related Files
 
-- `/20-actors/wakai/manifest.jsonld`
-- `/20-actors/wakai/README.md`
-- `/00-contracts/lexicons/com/etzhayyim/wakai/` (5 Lexicons + README)
+- `manifest.edn` (canonical)
+- `README.md`
+- `lex/` (canonical EDN) and `wire/` (external JSON)
 - `/90-docs/adr/2605263500-wakai-mutual-aid-tier-b-actor-r0.md`
 - `/90-docs/adr/2605192145-etzhayyim-public-fund-architecture.md` — backstop source
 - `/90-docs/adr/2605263200-kazaori-disaster-response-tier-b-actor-r0.md` — emergency cross-actor

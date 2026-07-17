@@ -1,0 +1,79 @@
+{"lexicon" 1,
+ "id" "com.etzhayyim.wakai.silenWakaiReview",
+ "description"
+ "Quarterly Council review. Const-field structural enforcement across G3/G4/G5/G6/G7/G9/G11. Verifies NOT-insurance discipline + no commercial insurance software + no commercial re-insurance + no investment return + no pre-existing condition exclusion + community discernment compliance + vocation-flow L5 administrator compliance.",
+ "defs"
+ {"main"
+  {"type" "record",
+   "key" "tid",
+   "record"
+   {"type" "object",
+    "required"
+    ["createdAt"
+     "reviewPeriodStartUtc"
+     "reviewPeriodEndUtc"
+     "commercialInsuranceSoftwarePenetrationPct"
+     "commercialReInsurancePenetrationPct"
+     "defiYieldFarmingActiveCount"
+     "tokenSpeculationActiveCount"
+     "claimDenialEventsCount"
+     "preExistingConditionExclusionEventsCount"
+     "administratorVocationFlowCompliantRatioPctIntegerHundredths"
+     "communityDiscernmentEventsCount"
+     "councilAttestations"],
+    "properties"
+    {"reviewPeriodEndUtc" {"type" "string", "format" "datetime"},
+     "abilityScaledContributionCompliancePct"
+     {"type" "integer",
+      "description"
+      "G8 audit: % of contributions self-attested ability-scaled"},
+     "publicFundBackstopTotalUsdMillicents" {"type" "integer"},
+     "claimDenialEventsCount"
+     {"type" "integer",
+      "const" 0,
+      "description"
+      "G3 STRUCTURAL: const 0; NOT insurance; no claim denial possible (community discernment only)"},
+     "createdAt" {"type" "string", "format" "datetime"},
+     "totalContributorsActive" {"type" "integer"},
+     "totalRecipientsServed" {"type" "integer"},
+     "publicFundBackstopActivationsCount" {"type" "integer"},
+     "preExistingConditionExclusionEventsCount"
+     {"type" "integer",
+      "const" 0,
+      "description"
+      "G7 STRUCTURAL: const 0; no underwriting; no exclusion"},
+     "ipfsPinCid" {"type" "string"},
+     "administratorVocationFlowCompliantRatioPctIntegerHundredths"
+     {"type" "integer",
+      "const" 10000,
+      "description"
+      "G11 STRUCTURAL: const 10000; all administrators are vocation-flow L5 stewards"},
+     "wellbecomingAttested" {"type" "boolean"},
+     "totalDistributions" {"type" "integer", "minimum" 0},
+     "publishedAtMstUri" {"type" "string"},
+     "defiYieldFarmingActiveCount"
+     {"type" "integer",
+      "const" 0,
+      "description" "G6 STRUCTURAL: const 0; no DeFi yield farming"},
+     "commercialInsuranceSoftwarePenetrationPct"
+     {"type" "integer",
+      "const" 0,
+      "description"
+      "G4 STRUCTURAL: const 0; no Guidewire / Duck Creek / Insurity / Sapiens / Majesco / SAP Insurance / Oracle Insurance / Lemonade / Hippo"},
+     "communityDiscernmentEventsCount"
+     {"type" "integer",
+      "description"
+      "G9 audit signal: total community discernment events (every distribution event)"},
+     "commercialReInsurancePenetrationPct"
+     {"type" "integer",
+      "const" 0,
+      "description"
+      "G5 STRUCTURAL: const 0; no Munich Re / Swiss Re / SCOR / Hannover Re / Berkshire Hathaway Re"},
+     "tokenSpeculationActiveCount"
+     {"type" "integer",
+      "const" 0,
+      "description" "G6 STRUCTURAL: const 0; no token speculation"},
+     "reviewPeriodStartUtc" {"type" "string", "format" "datetime"},
+     "totalContributions" {"type" "integer", "minimum" 0},
+     "councilAttestations"
+     {"type" "array", "items" {"type" "string"}, "minLength" 3}}}}}}

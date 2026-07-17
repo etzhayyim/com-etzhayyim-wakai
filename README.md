@@ -68,7 +68,7 @@ Etymology: 和会 (wakai) = harmony/reconciliation gathering; classical
 | `publicFundBackstopRequest` | When pool insufficient; Council Lv6+ ≥4/7 attestations + toritate cross-link |
 | `silenWakaiReview` | Quarterly Council review; G3/G4/G5/G6/G7/G9/G11 const-field structural enforcement |
 
-See `/00-contracts/lexicons/com/etzhayyim/wakai/README.md`.
+Canonical schemas live in `lex/`; external JSON projections live in `wire/`.
 
 ## Constitutional Gates (G1–G12)
 
@@ -98,9 +98,9 @@ See ADR-2605263500 §6.
 
 ## Related Files
 
-- `/20-actors/wakai/manifest.jsonld`
-- `/20-actors/wakai/CLAUDE.md`
-- `/00-contracts/lexicons/com/etzhayyim/wakai/` (5 Lexicons + README)
+- `manifest.edn` (canonical)
+- `CLAUDE.md`
+- `lex/` (5 canonical EDN lexicons)
 - `/90-docs/adr/2605263500-wakai-mutual-aid-tier-b-actor-r0.md`
 - `/90-docs/adr/2605263200-kazaori-disaster-response-tier-b-actor-r0.md` — cross-actor emergency
 - `/90-docs/adr/2605192145-etzhayyim-public-fund-architecture.md` — backstop source
