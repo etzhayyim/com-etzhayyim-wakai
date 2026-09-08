@@ -22,7 +22,7 @@
 
   House style: result maps stay string-keyed, matching the lexicon's camelCase field
   names 1:1 (AT-record / json shape); pure fns; stdlib only."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def ^:private contribution-methods
   #{"usdc-base-l2-direct" "usdc-base-l2-erc4337-paymaster"
