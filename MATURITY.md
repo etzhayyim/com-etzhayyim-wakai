@@ -8,7 +8,7 @@ denial / underwriting / investment-return / commercial (re)insurance / DeFi spec
 |---|---|
 | Lexicons | ✅ 5 under `com.etzhayyim.wakai.*` (contribution / distribution / poolStateReport / publicFundBackstopRequest / silenWakaiReview) — const fields fully populated (README's "R0 skeleton" note is now outdated) |
 | Manifest | ✅ canonical `manifest.edn`; JSON-LD retained only as `wire/manifest.jsonld` |
-| Tests | ✅ `test/wakai/methods/test_charter_gates.cljk` + `test/wakai/methods/test_pool.cljk`, run through `bb --classpath src:test run_tests.cljk` |
+| Tests | ✅ `test/wakai/methods/test_charter_gates.cljk` + `test/wakai/methods/test_pool.cljk`, run through `kbb --classpath src:test run_tests.cljk` |
 | Cells | ⛔ none yet (R1 — wiring `methods/pool.cljc` into a live kotoba-kotodama Pregel cell is separate from the reference-impl existing) |
 | Methods | ✅ `methods/pool.cljc` — R0 reference implementation (pure functions matching the Lexicon record shapes 1:1): `validate-contribution` (G6+G8), `validate-distribution` (G3+G7+G9, rejects <3 community or <3 Council attestations), `aggregate-pool-state` (G6 pinned; no individual amounts). `solve()` raises — validation + aggregation only, NOT a live pool |
 
