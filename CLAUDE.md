@@ -167,7 +167,7 @@ R3 adds emergency_pool_activation (kazaori cross-actor).
 
 **R0 status**: `methods/pool.cljc` is a reference-impl engine (pure `validate-contribution` /
 `validate-distribution` / `aggregate-pool-state` functions, exercised by
-`bb --classpath src:test run_tests.clj`) — this is validation + aggregation ONLY, not a live pool. The Pregel CELLS
+`bb --classpath src:test run_tests.cljk`) — this is validation + aggregation ONLY, not a live pool. The Pregel CELLS
 themselves (contribution / distribution / pool-state / backstop) are still unwired scaffold
 and RuntimeError on import; wiring one to `methods/pool.cljc` + live kotoba-kotodama execution
 is separate R1 work, Council+operator gated same as every other actor's R0→live boundary.
