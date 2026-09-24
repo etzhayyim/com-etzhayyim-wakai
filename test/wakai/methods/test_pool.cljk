@@ -1,6 +1,6 @@
 (ns wakai.methods.test-pool
   "Conformance tests for the wakai pool engine (contribution / distribution / aggregation)."
-  (:require [clojure.test :refer [deftest is run-tests]]
+  (:require [kotoba.test :refer [deftest is run-tests]]
             [wakai.methods.pool :as P]))
 
 (def NOW "2026-07-06T00:00:00Z")
