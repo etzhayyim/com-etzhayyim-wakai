@@ -1,4 +1,4 @@
-(require '[clojure.test :as t])
+(require '[kotoba.test :as t])
 
 (doseq [ns-sym '[wakai.methods.test-charter-gates
                   wakai.methods.test-pool
